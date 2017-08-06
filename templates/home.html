@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <div class="jumbotron text-center">
+        <h1>Welcome To Garage Park</h1>
+        <p class="lead">Please Create parking garage and Register Vechal Nuber and Color</p>
+        {% if session.logged_in == NULL %}
+          <a href="/createParkingGarage" class="btn btn-success btn-lg">Create parking garage</a>
+          <a href="/parking" class="btn btn-success btn-lg">Park</a>
+          <a href="/leave" class="btn btn-success btn-lg">Leave</a>
+          <a href="/status" class="btn btn-success btn-lg">Status</a>
+        {% endif %}
+    </div>
+
+{% endblock %}

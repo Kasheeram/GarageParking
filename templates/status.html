@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Garage Status</h1>
+    <hr>
+    <table class="table table-striped">
+        <tr>
+            <th>slot</th>
+            <th>Registration</th>
+            <th>Color</th>
+        </tr>
+        {% for slot in slots %}
+            <tr>
+                <td>{{slot.slot}}</td>
+                <td>{{slot.registration}}</td>
+                <td>{{slot.color}}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+
+
+{% endblock %}
